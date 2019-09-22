@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription dans la platform CoPrime  {% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css">
+
+
+      <div class="container bg-faded">
+
+          <div class="row">
+              <div class="col">
+                  <div class="mx-auto w-50 p-3 bg-dark text-white text-center">
+                      {{ form_start(registrationForm) }}
+                      <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
+                      {{ form_row(registrationForm.username,{'label':'Username:'})}}
+                      {{ form_row(registrationForm.nom,{'label':'Nom:'})}}
+                      {{ form_row(registrationForm.prenom,{'label':'Prenom:'})}}
+                      {{ form_row(registrationForm.email,{'label':'Email:'})}}
+                      {{ form_row(registrationForm.plainPassword,{'label':'Password:'}) }}
+
+                      <button class="btn btn-success">Register</button>
+                      {{ form_end(registrationForm) }}
+                  </div>
+              </div>
+          </div>
+      </div>
+
+{% endblock %}
